@@ -1,0 +1,117 @@
+:root {
+  --primary__color: #000;
+  --primary__font: "Zawya Pro";
+  --secondary__font: "Sofia Pro";
+  --gap: 1.5rem;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav__logo {
+  font-family: var(--primary__font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary__color);
+  cursor: pointer;
+}
+.nav__links {
+  height: 100%;
+}
+
+.nav__links ul {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.nav__links li {
+  list-style: none;
+}
+.nav__links li a {
+  font-family: var(--secondary__font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary__color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.right__side {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.icons__container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.account__container a {
+  font-family: var(--secondary__font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary__color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  position: relative;
+}
+
+.icon,
+.icon__shopping__bag {
+  font-size: 1.1rem;
+  color: var(--primary__color);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.icon__shopping__bag:hover + .shopping__bag__notification,
+.shopping__bag__notification:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 555;
+}
+
+.shopping__bag__notification {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 200px;
+  height: 222px;
+  border-radius: 10px;
+  background-color: rgb(242, 241, 241);
+  color: #fff;
+  font-size: 0.7rem;
+
+  z-index: -1;
+  transition: ease-in-out;
+}
+
+.search__bar {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+.search__bar input {
+  padding: 7px;
+  border: solid 1px gray;
+  border-radius: 15px;
+  width: 200px;
+}
