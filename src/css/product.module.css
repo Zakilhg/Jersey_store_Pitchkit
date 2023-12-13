@@ -9,6 +9,7 @@
 .product__card_container_Skelton {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .card,
@@ -34,27 +35,37 @@
 }
 
 .img {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
+.img:hover + .overlay {
+  opacity: 1;
+}
+
 .overlay {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
   position: absolute;
   bottom: 0;
-  left: 31%;
-  opacity: 0;
+  left: 0;
+  width: 100%;
   transition: opacity 0.3s ease;
 }
+
 .addToBagBtn {
-  display: inline-block;
-  padding: 10px 20px;
+  font-family: Zawya Pro;
+  padding: 7px 20px;
   background-color: black;
   color: white;
   border: none;
-  border-radius: 0;
+  cursor: pointer;
 }
+
 .card_body,
 .card_body_Skelton {
   font-family: Zawya Pro;
@@ -89,8 +100,8 @@
 
 .heart_btn {
   position: absolute;
-  top: 10px;
-  right: 32px;
+  top: 30px;
+  right: 25px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -100,8 +111,8 @@
 
 .small_icon {
   position: absolute;
-  top: 10px;
-  left: 18px;
+  top: 30px;
+  left: 25px;
   width: 36px;
   margin-left: 2px;
   opacity: 0.5;
@@ -130,5 +141,11 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product__card_container {
+    width: auto;
   }
 }

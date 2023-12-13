@@ -11,44 +11,44 @@ const Footer = () => {
 
         <div className={footer.menu}>
           <div className={footer.item}>
-            <h5 className={footer.menu_title}>Section 1</h5>
+            <h5 className={footer.menu_title}>Shop Online</h5>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <a href="/">New Collection</a>
               </li>
               <li>
-                <a href="/">About</a>
+                <a href="/">Categories</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a href="/">Gallery</a>
               </li>
             </ul>
           </div>
           <div className={footer.item}>
-            <h5 className={footer.menu_title}>Section 2</h5>
+            <h5 className={footer.menu_title}>Services</h5>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <a href="/">Interior Design</a>
               </li>
               <li>
-                <a href="/">About</a>
+                <a href="/">Interior Design</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a href="/">Product Design</a>
               </li>
             </ul>
           </div>
           <div className={footer.item}>
-            <h5 className={footer.menu_title}>Section 3</h5>
+            <h5 className={footer.menu_title}>About</h5>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <a href="/">Contact Us</a>
               </li>
               <li>
-                <a href="/">About</a>
+                <a href="/">Stories</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a href="/">FAQ</a>
               </li>
             </ul>
           </div>

@@ -26,18 +26,16 @@ const Product = ({ products, scroll }) => {
                   alt="CardImage"
                   onLoad={console.log("Hello")}
                 />
+                <div className={product.overlay}>
+                  <button className={product.addToBagBtn}>Add to Cart</button>
+                </div>
               </Link>
-
-              <div className={product.overlay}>
-                <button className={product.addToBagBtn}>Add to bag</button>
-              </div>
             </div>
             <div className={product.card_body}>
               <h5 className={product.card_title}>{item.name}</h5>
               <p className={product.card_text_muted}>Football jersey</p>
               <p className={product.card_text}>{item.price} $</p>
               <button
-                style={{ display: "none" }}
                 className={product.heart_btn}
                 onClick={() => handleClick(index)}
               >
@@ -50,7 +48,6 @@ const Product = ({ products, scroll }) => {
               </button>
             </div>
             <img
-              style={{ display: "none" }}
               src={`http://127.0.0.1:8000/images/${item.brand_image}`}
               className={product.small_icon}
               id="brand"

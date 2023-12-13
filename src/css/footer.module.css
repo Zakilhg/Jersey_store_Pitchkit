@@ -42,9 +42,12 @@
 
 .item ul li a {
   text-decoration: none;
-  color: #ccc;
+  color: #949393;
   font-size: 15px;
   font-family: Zawya Pro;
+}
+.item ul li a:hover {
+  color: white;
 }
 
 .social {
@@ -65,4 +68,27 @@
   font-size: 1rem;
   color: #ccc;
   font-family: Zawya Pro;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .title {
+    text-align: center;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .menu h5,
+  .menu ul {
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
 }

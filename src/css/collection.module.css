@@ -62,3 +62,31 @@
 .slogan {
   font-family: "Sofia Pro Light";
 }
+
+@media only screen and (max-width: 600px) {
+  .collection {
+    flex-direction: column;
+  }
+  .collection_title {
+    font-size: 4rem;
+  }
+
+  .slider {
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .horizontal_scroll {
+    margin: 0;
+  }
+
+  .collection_title {
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .collection_description {
+    margin: 0;
+  }
+}

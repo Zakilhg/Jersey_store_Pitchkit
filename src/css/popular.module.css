@@ -22,3 +22,14 @@
 .product {
   flex: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 30px;
+    gap: 50px;
+  }
+
+  .container h2 {
+    text-align: center;
+  }
+}
