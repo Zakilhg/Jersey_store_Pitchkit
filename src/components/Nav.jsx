@@ -4,6 +4,7 @@ import { FaHeart, FaSearch, FaShoppingBag } from "react-icons/fa";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const navRef = useRef();
@@ -92,7 +93,9 @@ const Nav = () => {
         )}
       </div>
       <div className={nav.nav__logo}>
-        <h1>PitchKit</h1>
+        <Link to={"/"}>
+          <h1>PitchKit</h1>
+        </Link>
       </div>
       <div className={nav.nav__links}>
         <ul>
@@ -170,7 +173,7 @@ const Nav = () => {
         </div>
 
         <div className={nav.account__container}>
-          <a href="#">Login</a>
+          <Link to={"/login"}>login</Link>
         </div>
       </div>
     </nav>

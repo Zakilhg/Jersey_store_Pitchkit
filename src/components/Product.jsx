@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import product from "../css/product.module.css";
 import { Link } from "react-router-dom";
 
-const Product = ({ products, scroll }) => {
+const Product = ({ products }) => {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
 
   const handleClick = (index) => {
@@ -18,7 +18,7 @@ const Product = ({ products, scroll }) => {
       {products?.map((item, index) => (
         <div className={product.product__card_container} key={index}>
           <div className={product.card}>
-            <div className={product.image__container}>
+            <div className={`${product.image__container}`}>
               <Link to={`p/${item.id}`}>
                 <img
                   src={`http://127.0.0.1:8000/images/${item.image}`}
@@ -26,6 +26,7 @@ const Product = ({ products, scroll }) => {
                   alt="CardImage"
                   onLoad={console.log("Hello")}
                 />
+
                 <div className={product.overlay}>
                   <button className={product.addToBagBtn}>Add to Cart</button>
                 </div>
