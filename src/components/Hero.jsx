@@ -5,11 +5,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [
-    "../../public/img/hero.jpg",
-    "../../public/img/hero2.jpg",
-    "../../public/img/hero3.jpg",
-  ];
+  const images = ["./img/hero.jpg", "./img/hero2.jpg", "./img/hero3.jpg"];
 
   const handleNext = () => {
     if (currentIndex === images.length - 1) {
