@@ -4,11 +4,13 @@ const useFetch = (url) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
+    setTimeout(() => {
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          setData(data);
+        });
+    }, 5000);
   }, [url]);
 
   return [data];

@@ -15,7 +15,7 @@ const Product = ({ products }) => {
 
   return (
     <>
-      {products?.map((item, index) => (
+      {products.map((item, index) => (
         <div className={product.product__card_container} key={index}>
           <div className={product.card}>
             <div className={`${product.image__container}`}>
@@ -57,7 +57,35 @@ const Product = ({ products }) => {
           </div>
         </div>
       ))}
+
+      {!products.length &&
+        [1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+          <>
+            <ProductSkeleton key={n} />
+          </>
+        ))}
     </>
+  );
+};
+
+export const ProductSkeleton = () => {
+  return (
+    <div className={product.product__card_container}>
+      <div className={product.card}>
+        <div
+          className={`${product.image__container} ${product.skeleton}`}
+        ></div>
+        <div className={product.card_body}>
+          <div className={`${product.card_title} ${product.skeleton}`}></div>
+          <div
+            className={`${product.card_text_muted} ${product.skeleton}`}
+          ></div>
+          <div className={`${product.card_text} ${product.skeleton}`}></div>
+          <div className={`${product.heart_btn} ${product.skeleton}`}></div>
+        </div>
+        <div className={product.small_icon}></div>
+      </div>
+    </div>
   );
 };
 
